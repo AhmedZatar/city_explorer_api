@@ -83,7 +83,6 @@ function parkHandelr(req,res){
 
       });
 
-
       res.send(parkInfo);
 
 
@@ -133,7 +132,6 @@ function Park(cityName){
   this.url=cityName.url;
 
 }
-
 
 
 server.listen(PORT,()=>{
