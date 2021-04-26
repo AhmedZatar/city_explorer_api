@@ -60,6 +60,10 @@ function weatherHandelr(req,res){
       });
 
       res.send(allweatherdata);
+    })
+    .catch(error=>{
+
+      res.send(error);
     });
 
 }
@@ -85,8 +89,10 @@ function parkHandelr(req,res){
 
       res.send(parkInfo);
 
+    })
+    .catch(error=>{
 
-
+      res.send(error);
     });
 
 
