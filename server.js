@@ -11,7 +11,6 @@ const server = express();
 const PORT = process.env.PORT || 3030;
 server.use(cors());
 const client = new pg.Client(process.env.DATABASE_URL);
-// const client = new pg.Client({connectionString: process.env.DATABASE_URL, ssl:{ rejectUnauthorized:false} });
 const superagent = require('superagent');
 
 
@@ -20,15 +19,9 @@ const superagent = require('superagent');
 server.get('/location', locationHandelr);
 server.get('/weather', weatherHandelr);
 server.get('/parks', parkHandelr);
-// server.get('/add', addLocationData);
 server.get('/get', getLocationData);
 server.get('*', errorHandelr);
 
-
-// search_query VARCHAR(255),
-//     formatted_query VARCHAR(255),
-//     latitude VARCHAR(255),
-//     longitude
 
 
 
